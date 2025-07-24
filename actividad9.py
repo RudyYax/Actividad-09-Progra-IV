@@ -17,14 +17,10 @@ while opcion != 3:
                 codigo = input("Ingrese el codigo del cliente: ")
                 Clientes[codigo] = {}
                 Clientes[codigo]["nombre"] = input("Ingrese el nombre del cliente: ")
-                Clientes[codigo]["lugares"] = {}
                 cantidad_lugares = int(input("Ingrese la cantidad de lugares desea registrar (Max 5: "))
                 if cantidad_lugares <= 5:
                     for f in range(cantidad_lugares):
-                        lugar = input(f"Ingrese el {f+1} lugar del cliente: ")
-                        Clientes[codigo]["lugar"] = {
-                            "Lugar": lugar,
-                        }
+                        Clientes[codigo]["lugares"] = input(f"Ingrese el lugar {f+1} del cliente: ")
                 else:
                     print("No se puede mas de 5 lugares ")
 
@@ -33,8 +29,8 @@ while opcion != 3:
             for codigo, datos in Clientes.items():
                 print(f"Codigo del Cliente: {codigo}")
                 print(f"Nombre del Cluente: {datos['nombre']}")
-                for codigo, lugar in datos["lugar"].items():
-                    print(f"Lugares: {lugar}")
+                print(f"Lugares Visistados: {datos['lugares']}")
+
 
 
 
