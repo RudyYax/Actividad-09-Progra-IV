@@ -24,6 +24,7 @@ while opcion != 3:
                         visitados= input(f"Lugar {f+1}: ")
                         Clientes [codigo]["lugaresvisitados"][visitados] = {
                             "Lugar": visitados,
+
                         }
                 else:
                     print("No se puede mas de 5 lugares ")
@@ -35,11 +36,10 @@ while opcion != 3:
                 print(f"Nombre del Cluente: {datos['nombre']}")
                 for visita, lugares in datos["lugaresvisitados"].items():
                     print(f"Lugar Visitado:  {visita}")
+            print("la suma de cantidad registradas es: ", cantidad)
 
 
-
-
-
-
-
-
+def cantidad(cantidad_lugares):
+    for f in range(cantidad_lugares):
+        total = cantidad_lugares+1
+        print(f"La cantidad es: {total}")
